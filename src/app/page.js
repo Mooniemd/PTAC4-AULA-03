@@ -13,6 +13,10 @@ export default function Login() {
     handlerAcessUser();
     push('/pages/dashboard');
   }
+  const handlerRegister = (e) => {
+    e.preventDefault();
+    push('/pages/register');
+  }
 
 
   return (
@@ -30,6 +34,9 @@ export default function Login() {
           onChange={(e) => { setPassword(e.target.value) }}>
         </input>
         <button>Entrar</button>
+      </form>
+      <form onSubmit={handlerRegister}>
+        <button>Registre-se</button>
       </form>
     </div>
   )
